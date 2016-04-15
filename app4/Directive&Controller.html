@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="MyModule">
+	<head>
+		<meta charset="utf-8">
+        <title>loader-link</title>
+	</head>
+	<body>
+    <h1>Directive指令</h1>
+		<div ng-controller="MyCtrl">
+			<loader howToLoad="loadData()">滑动加载</loader>
+		</div>
+        <br><br>
+		<div ng-controller="MyCtrl2">
+			<loader howToLoad="loadData2()">滑动加载</loader>
+		</div>
+	</body>
+	<script src="framework/angular-1.3.0.14/angular.js"></script>
+	<script src="Directive&Controller.js"></script>
+</html>
