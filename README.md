@@ -1,7 +1,7 @@
 # AngularJsNote
 AngularJs practice
 
-## app1 angular-route，angular-animate，路由与动画
+## app2 angular-route，angular-animate，路由与动画
 ![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/image/animate-route.png)
 ## 局部app.js代码：
 ```js
