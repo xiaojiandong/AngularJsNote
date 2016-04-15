@@ -64,3 +64,82 @@ bookStoreApp.config(function($routeProvider) {
     -webkit-animation: songAreaToLine 0.5s both ease-in;
 }
 ```
+
+## app4 directive指令
+## 局部 Directive&Direcive.html代码：
+```html
+    <h1>指令之间如何进行交互</h1>
+	<div class="row">
+		<div class="col-md-3">
+			<animal run>动物A---跑</animal>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<animal run eat>动物B---跑+吃</animal>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<animal run eat sleep>动物C---跑+吃+睡</animal>
+		</div>
+	</div>
+```
+## 局部 Directive&Directive.js代码：
+```js
+ var myModule = angular.module("MyModule", []);
+myModule.directive("animal", function() {
+    return {
+        scope: {}, // 独立作用域，里面可传3种参数 ：=，@,&
+        restrict: 'AE',
+        // 公共被外部调用的方法public，写在controller里
+        controller: function($scope) { // 指令内部的controller
+            $scope.abilities = [];
+            this.addRun = function() {
+                $scope.abilities.push(" 跑的快 ");
+            };
+            this.addEat = function() {
+                $scope.abilities.push(" 吃的多 ");
+            };
+            this.addSleep = function() {
+                $scope.abilities.push(" 睡的饱 ");
+            };
+        },
+        // 指令自有的方法写在link中
+        link: function(scope, element, attrs) {
+            element.addClass('btn btn-primary');
+//            element.bind("mouseenter", function() {
+//                console.log(scope.abilities);
+//            });
+            element.on("click", function() {
+                alert(scope.abilities);
+            });
+        }
+    }
+});
+myModule.directive("run", function() {
+    return {
+        require: '^animal', // 注入 animal这个指令
+        // link方法的参数：作用域，元素，属性，一级父控制器
+        link: function(scope, element, attrs, animalCtrl) {
+            animalCtrl.addRun();
+        }
+    }
+});
+myModule.directive("eat", function() {
+    return {
+        require: '^animal',
+        link: function(scope, element, attrs, animalCtrl) {
+            animalCtrl.addEat();
+        }
+    }
+});
+myModule.directive("sleep", function() {
+    return {
+        require: '^animal',
+        link: function(scope, element, attrs, animalCtrl) {
+            animalCtrl.addSleep();
+        }
+    }
+});
+```
