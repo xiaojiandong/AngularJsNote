@@ -66,6 +66,7 @@ bookStoreApp.config(function($routeProvider) {
 ```
 
 ## app4 directive指令
+![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/image/directive-view.png)
 ## 局部 Directive&Direcive.html代码：
 ```html
     <h1>指令之间如何进行交互</h1>
