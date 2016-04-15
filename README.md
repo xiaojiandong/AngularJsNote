@@ -91,6 +91,7 @@ bookStoreApp.config(function($routeProvider) {
 myModule.directive("animal", function() {
     return {
         scope: {}, // 独立作用域，里面可传3种参数 ：=，@,&
+        // A-attribute,E-element,M-comment,C-class
         restrict: 'AE',
         // 公共被外部调用的方法public，写在controller里
         controller: function($scope) { // 指令内部的controller
