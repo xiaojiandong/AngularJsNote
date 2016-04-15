@@ -1,0 +1,159 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: '微软雅黑';
+    text-align: center;
+}
+.page{
+    position: absolute;
+    bottom: 0;
+    top:0;
+    padding-top: 200px;
+    width: 100%;
+}
+.page h1 {
+    font-size:60px;
+}
+.page a {
+    margin-top:50px;
+}
+.hello {
+    background:#00D0BC;
+    color:#FFFFFF;
+}
+.list{
+    background:#E59400;
+    color:#FFFFFF;
+}
+.doSomething{
+    background:pink;
+    color:#000;
+}
+.songsList{
+    background:#00ff00;
+    color:#f00;
+}
+@-webkit-keyframes rotateFall {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    20% {
+        -webkit-transform: rotateZ(10deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+    40% {
+        -webkit-transform: rotateZ(17deg);
+    }
+    60% {
+        -webkit-transform: rotateZ(16deg);
+    }
+    100% {
+        -webkit-transform: translateY(100%) rotateZ(17deg);
+    }
+}
+@-webkit-keyframes slideOutLeft {
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes rotateOutNewspaper {
+    to {
+        -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+        -webkit-opacity: 0;
+    }
+}
+@-webkit-keyframes scaleUp {
+    from {
+        -webkit-opacity: 0.3;
+        -webkit-transform: scale(0.8);
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+        -webkit-transform:translateX(100%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform:translateY(100%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes doTopToDown {
+    from {
+        -webkit-transform:translateY(-100%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+@-webkit-keyframes doDownToTop {
+    from {
+        -webkit-transform:translateY(0);
+    }
+    to {
+        -webkit-transform: translateY(-100%);
+    }
+}
+@-webkit-keyframes songLineToArea {
+    from {
+        -webkit-transform:scaleY(0);
+    }
+    to {
+        -webkit-transform:scaleY(1);
+    }
+}
+@-webkit-keyframes songAreaToLine {
+    from {
+        -webkit-transform:scaleY(1);
+    }
+    to {
+        -webkit-transform:scaleY(0);
+    }
+}
+
+.ng-enter {
+    z-index: 8888;
+}
+.ng-leave {
+    z-index: 9999;
+}
+
+/*.hello 这个类进入的时候，ng-enter引用scaleUp这个动画*/
+.hello.ng-enter {
+    -webkit-animation: scaleUp 0.5s both ease-in;
+}
+.hello.ng-leave {
+    transform-origin: 0% 0%;
+    -webkit-animation: rotateFall 1s both ease-in;
+}
+
+.list.ng-enter {
+    -webkit-animation:slideInRight 0.5s both ease-in;
+}
+.list.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+}
+
+.doSomething.ng-enter{
+    -webkit-animation: doTopToDown 0.5s both ease-in;
+}
+.doSomething.ng-leave{
+    -webkit-animation: doDownToTop 0.5s both ease-in;
+}
+
+.songsList.ng-enter{
+    -webkit-animation: songLineToArea 0.5s both ease-in;
+}
+.songsList.ng-leave{
+    -webkit-animation: songAreaToLine 0.5s both ease-in;
+}

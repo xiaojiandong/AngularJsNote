@@ -1,0 +1,17 @@
+<h3>hello -> 主页（默认重定向）</h3>
+<h3>booksList -> 书单</h3>
+<h3>songsList -> 歌曲</h3>
+<h3>doSomething -> 其他交互</h3>
+        <p>{{readTips.tips}}</p>
+<ul>
+    <li ng-repeat="song in songs">
+        歌曲:{{song.name}}&nbsp;&nbsp;&nbsp;歌手:{{song.author}}
+    </li>
+    <br/>
+    <p>同样的遍历books，在不同controller的呈现</p>
+    <li ng-repeat="book in books">
+     课程:{{book.title}}&nbsp;&nbsp;&nbsp;老师:{{book.author}}
+    </li>
+</ul>
+
+<p><a href="#/hello">返回首页</a></p>
