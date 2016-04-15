@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>继承controller MVC</title>
+        <script src="js/angular-1.3.0.js"></script>
+        <script src="js/MVC3.js"></script>
+        <link rel="stylesheet" href="css/common.css" />
+        <style>
+            .common-controller{
+                width: 450px;
+                padding: 30px;
+                background-color: rgba(0,200,0,0.3);
+            }
+           .controller1{
+               width: 400px;
+               background-color: pink;
+           }
+           .controller2{
+               width: 400px;
+               margin-top: 30px;
+               background-color: rgb(220,30,10);
+           }
+        </style>
+    </head>
+    <body>
+    <h1>MVC 子controller继承父类的controller</h1>
+        <!--最外层的通用控制器-->
+        <div ng-controller="CommonController" class="common-controller">
+            <p>1 this is the outer CommonController</p>
+
+            <!--第1个控制器-->
+            <div ng-controller="Controller1" class="controller1">
+                <p>2 this is the first controller1</p>
+                <p>{{greeting.text}},Angular</p>
+                <button ng-click="ctrl1Fn()">ctrl1</button>
+                <button ng-click="commonFn2()">通用2</button>
+            </div>
+
+            <!--第2个控制器-->
+            <div ng-controller="Controller2" class="controller2">
+                <p>3 this is the second controller2</p>
+                <p>{{greeting.text}},Angular</p>
+                <button ng-click="ctrl2Fn()">ctrl2</button>
+                <button ng-click="commonFn1()">通用1</button>
+            </div>
+        </div>
+    </body>
+</html>

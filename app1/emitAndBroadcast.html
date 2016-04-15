@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+        <title>通信$on,$emit,$broadcast</title>
+		<link rel="stylesheet" type="text/css" href="css/Scope1.css" />
+        <script src="js/angular-1.3.0.js"></script>
+        <script src="js/emitAndBroadcast.js"></script>
+	</head>
+	<body>
+        <h2>不同作用域之间进行通信</h2>
+        <h2>1. $on 用于接收event与data</h2>
+        <h2>2. $emit 只能向parent controller传递event与data</h2>
+        <h2>3. $broadcast 只能向child controller传递event与data</h2>
+        <br>
+
+		<div ng-controller="EventController">
+            <h4>Root scope MyEvent count: {{count}}</h4>
+			<ul>
+				<li ng-repeat="i in [1]" ng-controller="EventController">
+					<button ng-click="$emit('MyEvent')">
+						$emit('MyEvent')向上通信
+					</button>
+					<button ng-click="$broadcast('MyEvent')">
+						$broadcast('MyEvent')向下通信
+					</button>
+					<br>
+                    <h4>中间total Middle scope MyEvent count: {{count}}</h4>
+
+					<ul>
+						<li ng-repeat="item in [1,2,3]" ng-controller="EventController">
+                          <p>Leaf scope MyEvent count: {{count}}</p>
+						</li>
+					</ul>
+
+				</li>
+			</ul>
+		</div>
+
+	</body>
+</html>

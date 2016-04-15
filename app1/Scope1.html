@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+        <title>scope作用域1</title>
+		<link rel="stylesheet" type="text/css" href="css/Scope1.css" />
+        <script src="js/angular-1.3.0.js"></script>
+        <script src="js/Scope1.js"></script>
+	</head>
+	<body>
+		<div class="show-scope-demo">
+			<div ng-controller="GreetCtrl">
+			 <h2>Hello {{name}}!</h2>
+			</div>
+			<div ng-controller="LanguageListCtrl">
+                <h2>ng-repeat 指令</h2>
+				<ol>
+					<li ng-repeat="name in names">
+						{{name.language}} from {{department}}
+					</li>
+				</ol>
+			</div>
+		</div>
+	</body>
+</html>
+

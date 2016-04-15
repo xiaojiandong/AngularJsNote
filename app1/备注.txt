@@ -1,0 +1,3 @@
+
+
+// MVC 数据绑定，$scope作用域 $on,$emit,$broadcast 通信
