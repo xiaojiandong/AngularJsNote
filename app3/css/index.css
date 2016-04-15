@@ -1,0 +1,5 @@
+
+*{
+    font-family: '微软雅黑';
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
