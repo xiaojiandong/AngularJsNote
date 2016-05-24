@@ -146,4 +146,4 @@ myModule.directive("sleep", function() {
 });
 ```
 ## filter 过滤器：
-[!image](https://github.com/xiaojiandong/AngularJsNote/blob/master/image/filter.png)
+![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/image/filter.png)
