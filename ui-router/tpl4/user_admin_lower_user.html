@@ -1,0 +1,17 @@
+
+<!-- 用户管理之中端用户 -->
+
+<div style="background: rgba(20,200,200,0.6);">
+    <h1>C这里是低端用户</h1>
+    <ul>
+        <li ng-repeat="user in allUser | filter : {'attr_id' : '2'}">
+            <h1>低端用户：{{user.name}} - {{user.user_attr}}
+              <a href="javascript:;" style="display: inline-block;"
+                 class="btn btn-success" ng-click="onEditClick(user)">编辑 - 升级</a>
+              <button class="btn btn-danger" ng-click="onShowDetailClick(user)">查看详情</button>
+            </h1>
+        </li>
+    </ul>
+</div>
+
+<div ng-view=""></div>

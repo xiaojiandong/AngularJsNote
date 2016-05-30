@@ -1,0 +1,57 @@
+
+
+<!-- 注册页面 -->
+<div class="container">
+    <h1>注册页面</h1>
+
+   <!--
+   <form name="myForm">
+    <p>名字：
+       <input name="name" placeholder="名字" type="text" ng-model="newUserObj.name"/>
+        <span ng-show="!myForm.name.$valid">有错</span>
+        <span ng-show="myForm.name.$error.required">必填</span>
+        <span ng-show="myform.name.$error.email">email 地址不对</span>
+    </p>
+    <p>类型：<input type="text" ng-model="user_attr" placeholder="vip" />
+      <select ng-model="user_attr">
+          <option ng-repeat="type in types" >{{type.type}}</option>
+      </select>
+    </p>
+    <p>用户邮箱：
+        <input name="myEmail" required type="email" ng-model="newUserObj.user_email"/>
+        <span ng-show="!myForm.myEmail.$valid">有错</span>
+        <span ng-show="myForm.myEmail.$error.required">必填</span>
+        <span ng-show="myform.myEmail.$error.email">email 地址不对</span>
+    </p>
+
+    <p>国籍：<input required type="text" ng-model="newUserObj.user_country"/></p>
+    <button ng-disabled="!myForm.$valid" class="btn btn-success" ng-click="onRegisterClick()">注册</button>
+   </form>
+
+    -->
+
+    <h1>表单验证</h1>
+    <form name="myForm" novalidate>
+        <p>用户名:<br>
+            <input type="text" name="user" ng-model="user" required ng-maxlength="10">
+             <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+               <span ng-show="myForm.user.$error.required">用户名是必须的。</span>
+               <span ng-show="myForm.user.maxlength">太长了</span>
+             </span>
+        </p>
+        <p>邮箱:<br>
+           <input type="email" name="email" ng-model="email" required>
+            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+             <label ng-show="myForm.email.$error.required">邮箱是必须的。</label>
+             <label ng-show="myForm.email.$error.email">非法的邮箱地址。</label>
+            </span>
+        </p>
+        <p>
+        <input type="submit"
+               ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+        </p>
+    </form>
+
+
+
+</div>

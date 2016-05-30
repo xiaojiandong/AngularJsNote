@@ -1,0 +1,108 @@
+
+
+[
+  {
+    "name" : "kjdshaksjh" ,
+    "user_attr" : "vip" ,
+    "attr_id" : "0" ,
+    "user_id" : "0" ,
+    "user_email" : "abc123@163.com",
+    "user_country" : "美国"
+  },
+  {
+    "name" : "王二小" ,
+    "user_attr" : "middle" ,
+    "attr_id" : "1" ,
+    "user_id" : "1" ,
+    "user_email" : "cba123@162.com",
+    "user_country" : "天朝"
+  },
+  {
+    "name" : "李四" ,
+    "user_attr" : "vip"  ,
+    "attr_id" : "0" ,
+    "user_id" : "2" ,
+    "user_email" : "2541521@qq.com",
+    "user_country" : "法国"
+  },
+  {
+    "name" : "孔二狗" ,
+    "user_attr" : "lower" ,
+    "attr_id" : "2" ,
+    "user_id" : "3" ,
+    "user_email" : "zxz52415@gmail.com",
+    "user_country" : "岛国"
+  },
+  {
+    "name" : "Apple" ,
+    "user_attr" : "vip" ,
+    "attr_id" : "0" ,
+    "user_id" : "4" ,
+    "user_email" : "zzx1956554@163.com",
+    "user_country" : "韩国"
+  },
+  {
+    "name" : "Lancy" ,
+    "user_attr" : "vip" ,
+    "attr_id" : "0" ,
+    "user_id" : "5" ,
+    "user_email" : "kexy521@162.com",
+    "user_country" : "俄罗斯"
+  },
+  {
+    "name" : "Google" ,
+    "user_attr" : "lower" ,
+    "attr_id" : "2" ,
+    "user_id" : "6" ,
+    "user_email" : "52416421@qq.com",
+    "user_country" : "印度"
+  },
+  {
+    "name" : "Baidu" ,
+    "user_attr" : "middle" ,
+    "attr_id" : "1" ,
+    "user_id" : "7" ,
+    "user_email" : "11111521@qq.com",
+    "user_country" : "新加坡"
+  },
+  {
+    "name" : "Tencent" ,
+    "user_attr" : "middle" ,
+    "attr_id" : "1" ,
+    "user_id" : "8" ,
+    "user_email" : "2541kuet@163.com",
+    "user_country" : "瑞士"
+  },
+  {
+    "name" : "Mi" ,
+    "user_attr" : "vip" ,
+    "attr_id" : "0" ,
+    "user_id" : "9" ,
+    "user_email" : "87895456@qq.com",
+    "user_country" : "德国"
+  },
+  {
+    "name" : "360" ,
+    "user_attr" : "middle" ,
+    "attr_id" : "1" ,
+    "user_id" : "10" ,
+    "user_email" : "25jshj521@162.com",
+    "user_country" : "USA"
+  },
+  {
+    "name" : "张麻子" ,
+    "user_attr" : "lower" ,
+    "attr_id" : "2" ,
+    "user_id" : "11" ,
+    "user_email" : "15284514122@163.com",
+    "user_country" : "比利时"
+  },
+  {
+    "name" : "刘豆子" ,
+    "user_attr" : "lower" ,
+    "attr_id" : "2" ,
+    "user_id" : "12" ,
+    "user_email" : "2444471714@qq.com",
+    "user_country" : "蒙古国"
+  }
+]

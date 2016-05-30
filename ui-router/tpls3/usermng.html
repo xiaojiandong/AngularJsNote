@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <!-- <a ui-sref="#" class="list-group-item js_item" ng-class="{active : isActive}" ng-click="onItemClick()">用户分类</a>
+                    <a ui-sref="index.usermng.highendusers" class="list-group-item js_item">高端用户</a>
+                    <a ui-sref="index.usermng.normalusers" class="list-group-item js_item">中端用户</a>
+                    <a ui-sref="index.usermng.lowusers" class="list-group-item js_item">低端用户</a>
+                    <a ui-sref="#" class="list-group-item js_item">黑名单</a> -->
+                
+                <ul>
+                 <li ng-repeat='uiSref in uiSrefs'>
+                  <a ui-sref='index.usermng.{{uiSref.url}}' ng-click='setUiSrefClick($index)'
+                  class="list-group-item" ng-class='{active : $index == currentIndex}'>
+                	{{uiSref.word}}
+                  </a>
+                 </li>	
+                </ul>
+                </div>
+                <!--
+                <ul>
+                 <li ng-repeat='name in names'>
+                 	名字：{{name}}
+                 </li>	
+                </ul>
+                -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" ng-click="addUserType()">新增用户</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9" style="border: 2px solid red">
+        <div ui-view></div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+
+<!-- 用户管理页面 -->
+<!--<a ui-sref=".vip_user">VIP用户</a>-->
+<!--<a ui-sref=".middle_user">中端用户</a>-->
+<!--<a ui-sref="">低端用户</a>-->
+
+<div>
+  <div  class="row user-kinds-wrap">
+   <div class="col-md-3">
+     <a ui-sref=".vip_user" class="btn btn-danger">高端用户</a>
+     <a ui-sref=".middle_user" class="btn btn-info">中端用户</a>
+     <a ui-sref=".lower_user" class="btn btn-success">低端用户</a>
+   </div>
+   <div class="col-md-8 col-md-offset-1" style="border: 2px solid green;">
+     <div ui-view="">
+       <ul>
+         <li ng-repeat="user in allUser">
+             用户名 ： {{user.name}} - {{user.user_attr}}
+         </li>
+       </ul>
+     </div>
+   </div>
+  </div>
+</div>
+

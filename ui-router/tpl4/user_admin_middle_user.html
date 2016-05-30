@@ -1,0 +1,13 @@
+
+<!-- 用户管理之中端用户 -->
+
+<div style="border: 10px solid pink;border-radius: 20px;">
+  <h1>B这里是中端用户</h1>
+  <ul>
+   <li ng-repeat="user in allUser | filter : {'attr_id' : '1'}">
+      <h1>中端用户：{{user.name}} - {{user.user_attr}}
+        <button class="btn btn-danger" ng-click="onShowDetailClick(user)">查看详情</button>
+      </h1>
+   </li>
+ </ul>
+</div>

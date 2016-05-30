@@ -1,0 +1,12 @@
+
+
+<div ng-show="isShowInfo">
+ <h1 ng-repeat="item in items">
+    {{$index}} - {{item.item}}
+ </h1>
+ <h1 ng-bind="str" style="color:green"></h1>
+ <a href="#/home/paragraph" class="btn btn-primary">返回paragraph页面</a>
+ <a href="#/about" class="btn btn-primary">跳转到about页面</a>
+</div>
+
+<a href="javascript:void(0);" class="btn btn-danger" ng-click="clearStrInfo()">{{showInfoWords}}</a>

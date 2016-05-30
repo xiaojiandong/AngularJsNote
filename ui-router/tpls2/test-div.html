@@ -1,0 +1,10 @@
+
+<div style="width: 500px;height: 200px;background: pink">
+  <ul>
+     <li ng-repeat="userInfo in userInfos">
+        名字：{{$index}} - {{userInfo.name}},年龄：{{userInfo.age}}，家乡：{{userInfo.home}}
+        <span class="btn btn-danger" ng-click="onDelItemClick(this)">X</span>
+     </li>
+  </ul>
+  <a href="#/home" class="btn btn-danger">回到home页面</a>
+</div>

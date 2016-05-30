@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="MyRouteApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>ui-route路由4</title>
+    <link rel="stylesheet" href="css/bootstrap-3.0.0/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="css/index.css">-->
+    <script src="js/angular-1.3.0.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="MyUIRoute4.js"></script>
+    <style>
+        *{
+            font-family: '微软雅黑';
+        }
+        .user-kinds-wrap a{
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ui-route</h1>
+    <div class="navbar navbar-info">
+     <div class="navbar-header">
+       <a class="navbar-brand" href="#/index">首页</a>
+       <a class="navbar-brand" ui-sref="user_admin">用户管理</a>
+       <a class="navbar-brand" ui-sref="power_admin">权限管理</a>
+       <a class="navbar-brand" ui-sref="report_admin">报表管理</a>
+       <a class="navbar-brand" ui-sref="system_setting">系统设置</a>
+       <a class="navbar-brand" ui-sref="register">注册</a>
+       <a class="navbar-brand" ui-sref="personal_center">个人中心</a>
+     </div>
+    </div>
+    <hr/>
+
+
+    <div style="border: 2px solid red;">
+        <div ui-view></div>
+    </div>
+
+</body>
+
+</html>
