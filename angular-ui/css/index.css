@@ -1,0 +1,90 @@
+body {
+  font-family: '微软雅黑';
+}
+body ul {
+  list-style: none;
+}
+a,
+a:hover,
+a:visited,
+a:checked {
+  color: #000;
+  text-decoration: none;
+}
+.main-ui-view-wrap {
+  overflow: hidden;
+}
+.jobs-nav-check {
+  background: #fafafa;
+  padding: 10px;
+}
+.jobs-nav-check .job-type-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.jobs-nav-check .active-type {
+  color: #fff;
+  background: #00b38a;
+}
+.jobs-nav-check .active {
+  background: #00b38a;
+  color: #fff;
+}
+.job-info-wrap {
+  background: #fff;
+}
+.job-info-wrap .job-item-wrap {
+  border: 1px solid #ccc;
+  border-left: 4px solid #00b38a;
+  padding: 10px;
+  margin-top: 20px;
+}
+.job-info-wrap .job-item-wrap:hover {
+  background: #fafafa;
+}
+.job-info-wrap .job-item-wrap .line1 .name-location {
+  color: #00b38a;
+}
+.job-info-wrap .job-item-wrap .line1 .time {
+  float: right;
+  color: #999;
+}
+.job-info-wrap .job-item-wrap .line2 .salary {
+  color: red;
+}
+.job-info-wrap .job-item-wrap .line2 .experience {
+  margin-left: 22px;
+}
+.all-company-content {
+  position: relative;
+  overflow: hidden;
+}
+.all-company-content .single-company-wrap {
+  float: left;
+  width: 240px;
+  height: 180px;
+  margin: 10px;
+  padding: 0;
+  border: 2px solid red;
+  background: rgba(250, 240, 230, 0.6);
+  box-sizing: border-box;
+}
+.all-company-content .single-company-wrap p {
+  padding: 0;
+  margin: 0;
+}
+.all-company-content .single-company-wrap .enter-company-btn {
+  display: block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background: #00b38a;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,109 @@
+
+body{
+  font-family: '微软雅黑';
+
+  ul{
+    list-style: none;
+  }
+}
+
+a,a:hover,a:visited,a:checked{
+  color: #000;
+  text-decoration: none;
+}
+
+.main-ui-view-wrap{
+//  border: 2px solid red;
+  overflow: hidden;
+}
+
+// 工作类型
+.jobs-nav-check{
+  background: #fafafa;
+  padding: 10px;
+  .job-type-item{
+//    background: #00b38a;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+  }
+  .active-type{
+    color: #fff;
+    background: #00b38a;
+  }
+  .active{
+    background: #00b38a;
+    color: #fff;
+  }
+}
+
+// 工作详情
+.job-info-wrap{
+  background: #fff;
+  .job-item-wrap{
+    border: 1px solid #ccc;
+    border-left: 4px solid #00b38a;
+//    background: #eee;
+    padding: 10px;
+    margin-top: 20px;
+    &:hover{
+      background: #fafafa;
+    }
+    .line1{
+      .name-location{
+        color: #00b38a;
+      }
+      .time{
+        float: right;
+        color: #999;
+      }
+    }
+    .line2{
+      .salary{
+        color: red;
+      }
+      .experience{
+        margin-left: 22px;
+      }
+    }
+  }
+}
+
+// 一拍，公司父容器
+.all-company-content{
+  position: relative;
+  overflow: hidden;
+  .single-company-wrap{
+    float: left;
+    width: 240px;
+    height: 180px;
+    margin: 10px;
+    padding: 0;
+    border: 2px solid red;
+    background: rgba(250,240,230,0.6);
+    box-sizing: border-box;
+    &:hover{
+//      background: rosybrown;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+    }
+    .enter-company-btn{ // 进入公司
+      display: block;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 10px;
+      background: #00b38a;
+      margin: 0 auto;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}
+
+

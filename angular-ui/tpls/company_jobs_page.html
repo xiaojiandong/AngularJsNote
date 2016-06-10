@@ -1,0 +1,65 @@
+
+
+
+<div class="company-jobs-page-wrap">
+ <h1>近2个月共有 12  个再招职位</h1>
+ <div class="jobs-nav-check">
+   <label>职位:</label>
+   <!--
+   <span class="job-type" data-jobId="0">全部</span>
+   <span class="job-type" data-jobId="1">技术</span>
+   <span class="job-type" data-jobId="2">设计</span>
+   <span class="job-type" data-jobId="3">运营</span>
+   <span class="job-type" data-jobId="4">市场与销售</span>
+   -->
+
+     <!--
+      <span ng-repeat="jobType in jobTypes" class="job-type-item item-{{$index}}" ng-class=""
+         data-jobId="{{jobType.jobId}}"
+         ng-click="onChcekJobTypeClick(jobType)">
+       {{jobType.name}}{{$index}}
+      </span>
+
+      <span ng-repeat="jobType in jobTypes" class="job-type-item item-{{$index}}" ng-class="{active:$index == currentIndex}"
+            data-jobId="{{jobType.jobId}}"
+            ng-click="onChcekJobTypeClick($event)">
+       {{jobType.name}}{{$index}}
+      </span>
+
+      <ul class="job-info-wrap">
+        <li class="job-item-wrap" ng-repeat="jobInfo in jobInfos  | filter : {type : type}">
+            <p class="line1">
+                <span class="name-location">{{jobInfo.name}} [{{jobInfo.location}}]</span>
+                <span class="time">{{jobInfo.time}}</span>
+            </p>
+            <p class="line2">
+                <span class="salary">{{jobInfo.salary}}</span>
+                <span class="experience">{{jobInfo.experience}}</span>
+            </p>
+        </li>
+    </ul>
+   -->
+
+       <span ng-repeat="jobType in activeCompany.jobType" class="job-type-item item-{{$index}}"
+             ng-class="{active:$index == currentIndex}"
+             data-jobId="{{jobType.jobId}}"
+             ng-click="onChcekJobTypeClick($event)">
+             {{jobType.name}}{{$index}}
+       </span>
+
+    </div>
+
+     <ul class="job-info-wrap">
+         <li class="job-item-wrap" ng-repeat="jobInfo in activeCompany.companyJobs  | filter : {type : type}">
+             <p class="line1">
+                 <span class="name-location">{{jobInfo.name}} [{{jobInfo.location}}]</span>
+                 <span class="time">{{jobInfo.time}}</span>
+             </p>
+             <p class="line2">
+                 <span class="salary">{{jobInfo.salary}}</span>
+                 <span class="experience">{{jobInfo.experience}}</span>
+             </p>
+         </li>
+     </ul>
+
+</div>
