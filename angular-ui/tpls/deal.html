@@ -1,19 +1,40 @@
 
 <ul class="all-company-content">
    <!--<li class="single-company-wrap" ng-repeat="allCompany in allCompanys">-->
-   <li class="single-company-wrap js_box" ng-repeat="allCompany in allCompanys | filter : dealNationFilter">
+   <!--<li class="single-company-wrap js_box" ng-repeat="allCompany in allCompanys | filter : dealNationFilter">-->
    <!-- 匹配nation中存在'i'
      <li class="single-company-wrap" ng-repeat="allCompany in allCompanys | filter : {nation : 'i'}">
    -->
-     <h4>公司名称：{{allCompany.name}}</h4>
-     <p>成立时间：{{allCompany.time}}年</p>
-     <p>员工规模：{{allCompany.staff}}万人</p>
-     <p>所属国家：{{allCompany.nation}}</p>
-     <a class="enter-company-btn" attr-companyName="{{allCompany.name}}"
-        attr-id="{{$index}}"
-        ng-click="onEnterCompanyClick($event)">
-         进入公司
-     </a>
+     <!--<h4>公司名称：{{allCompany.name}}</h4>-->
+     <!--<p>成立时间：{{allCompany.time}}年</p>-->
+     <!--<p>员工规模：{{allCompany.staff}}万人</p>-->
+     <!--<p>所属国家：{{allCompany.nation}}</p>-->
+     <!--<a class="enter-company-btn" attr-companyName="{{allCompany.name}}"-->
+        <!--attr-id="{{$index}}"-->
+        <!--ng-click="onEnterCompanyClick($event)">-->
+         <!--进入公司-->
+     <!--</a>-->
+   <!--</li>-->
+
+   <li class="single-company-wrap js_box" ng-repeat="allCompany in allCompanys | filter : dealNationFilter">
+    <div class="main">
+      <div class="wrapper">
+          <div class="front">
+            <img class="img" ng-src="{{allCompany.img}}" alt=""/>
+          </div>
+          <div class="back">
+              <h4>公司名称：{{allCompany.name}}</h4>
+              <p>成立时间：{{allCompany.time}}年</p>
+              <p>员工规模：{{allCompany.staff}}万人</p>
+              <p>所属国家：{{allCompany.nation}}</p>
+              <a class="enter-company-btn" attr-companyName="{{allCompany.name}}"
+                 attr-id="{{$index}}"
+                 ng-click="onEnterCompanyClick($event)">
+                  进入公司
+              </a>
+         </div>
+      </div>
+    </div>
    </li>
 
 </ul>
