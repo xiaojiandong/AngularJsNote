@@ -8,6 +8,15 @@ require(['ng','common'], function(ng,common){
       ser1.age = '20岁';
     return ser1;
   });
+
+  //services.factory('companyMainService' , function(){
+      //var companyMainService = {};
+      //companyMainService.companyName = '千百度公司';
+      //companyMainService.companyCash = '500亿';
+      //companyMainService.companyStaff = '3万员工';
+      //companyMainService.registerTime = '1998年10月';
+      //return companyMainService;
+  //});
   // 招聘职位service
   services.factory('companyMainService',function(){
     var jobService = {};
@@ -166,16 +175,26 @@ require(['ng','common'], function(ng,common){
   services.factory('dealCompanyService' , function(){
     var dealCompany = {};
       dealCompany.allCompany = [
-          {'name' : '千度','time':'1998','staff':'3','nation':'china','id':'0'},
-          {'name' : '阿马逊','time':'1996','staff':'9','nation':'usa','id':'1'},
-          {'name' : '索尼娅','time':'1972','staff':'10','nation':'japan','id':'2'},
-          {'name' : '雅虎豹','time':'1995','staff':'2.5','nation':'usa','id':'3'},
-          {'name' : '诺基亚米','time':'1980','staff':'11','nation':'europe','id':'4'},
-          {'name' : '大众人','time':'1908','staff':'18','nation':'europe','id':'5'},
-          {'name' : '富士康福','time':'1977','staff':'120','nation':'taiwan','id':'6'},
-          {'name' : '苹果梨','time':'1975','staff':'10','nation':'usa','id':'7'},
-          {'name' : '腾讯雷','time':'1998','staff':'12','nation':'china','id':'8'},
-          {'name' : '塔塔','time':'1981','staff':'22','nation':'indian','id':'9'}
+          {'name' : '千度','time':'1998','staff':'3', 'nation':'china','id':'0',
+              'img' : 'http://my.csdn.net/uploads/201205/09/1336543861_6929.jpg'},
+          {'name' : '阿马逊','time':'1996','staff':'9','nation':'usa','id':'1',
+              'img' : 'http://leiphone.qiniudn.com/uploads/new/article/600_600/201411/546fe0480860b.jpg'},
+          {'name' : '索尼娅','time':'1972','staff':'10','nation':'japan','id':'2',
+              'img' : 'http://image2.sina.com.cn/IT/cr/2006/0308/2668949314.jpg'},
+          {'name' : '雅虎豹','time':'1995','staff':'2.5','nation':'usa','id':'3',
+              'img' : 'http://www.antewer.com/web_manage/manage/Upload/20118278447332.jpg'},
+          {'name' : '诺基亚米','time':'1980','staff':'11','nation':'europe','id':'4',
+              'img' : 'http://image1.hhczy.com/web/2014/7/12/5119281215370305.700x700.jpg'},
+          {'name' : '大众人','time':'1908','staff':'18','nation':'europe','id':'5',
+              'img' : 'http://img.vipcn.com/img2015/12/12/2015121257401893.png'},
+          {'name' : '富士康福','time':'1977','staff':'120','nation':'taiwan','id':'6',
+              'img' : 'http://i.ce.cn/ce/culture/gd/201408/21/W020140821347672730557.jpg'},
+          {'name' : '苹果梨','time':'1975','staff':'10','nation':'usa','id':'7',
+              'img' : 'http://pic.wenwo.com/fimg/7203597805_405.jpg'},
+          {'name' : '腾讯雷','time':'1998','staff':'12','nation':'china','id':'8',
+              'img' : 'http://www.cnautonews.com/qchl/kj/201509/W020150921463431071255.jpg'},
+          {'name' : '塔塔','time':'1981','staff':'22','nation':'indian','id':'9',
+              'img' : 'http://img.youxiguancha.com/game/2014/09/22/1411371973_15.jpg'}
       ];
       return dealCompany;
   });
