@@ -1,0 +1,7 @@
+﻿
+
+//  学生管理SPA
+// angular-ui-router.js
+// jquery
+// jquery-confirm.js
+// 用phpStrom打开

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse top-navbar-wrap" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="javascript:;">SPA综合实例</a>
+    </div>
+    <ul class="nav navbar-nav navbar-nav-ul">
+        <!--<li>-->
+            <!--<a ui-sref="index">首页</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a ui-sref="index.usermng.allstudents">班级管理</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a ui-sref="index.report">成绩管理</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a ui-sref="index.settings">学生注册</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a ui-sref="index.userInfo">个人中心</a>-->
+        <!--</li>-->
+        <li ng-repeat="tobarItem in tobarItems">
+          <a class="common-topbar topbar-{{$index}}" ng-class="{activeBar:$index == activeIndex}"
+             ng-click="onTopNavClick($index)"
+             ui-sref="{{tobarItem.sref}}">{{tobarItem.text}}</a>
+        </li>
+    </ul>
+</nav>
