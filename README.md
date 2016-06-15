@@ -147,3 +147,11 @@ myModule.directive("sleep", function() {
 ```
 ## filter 过滤器：
 ![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/image/filter.png)
+
+## class-admin，CRUD操作，局部视图：
+#### create创建
+![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/class-admin/image/1-create.png)
+#### retrieve查询
+![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/class-admin/image/2-retrieve.png)
+#### update更新,delete删除
+![image](https://github.com/xiaojiandong/AngularJsNote/blob/master/class-admin/image/4-delete-3-update.png)
