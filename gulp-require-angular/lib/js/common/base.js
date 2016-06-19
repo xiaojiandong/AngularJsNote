@@ -1,0 +1,1 @@
+define(["jquery","jquery_confirm","angular","bootstrap","router"],function(n,r,u,t,e){return SUBJ={angularInit:function(n){}}});

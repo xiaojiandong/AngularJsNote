@@ -1,0 +1,8 @@
+
+// 生产环境：dev
+// 发布环境 lib
+// 配置：gulpfile.js
+
+html主入口：dev/html/index.html
+js主入口：dev/js/scripts/index.js
+配置js：dev/js/scripts/require_config.js
