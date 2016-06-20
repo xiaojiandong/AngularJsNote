@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyRouteApp">
+<head>
+    <meta charset="utf-8">
+    <title>拉勾</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!--<meta name="viewport" content="width=750, target-densitydpi=device-dpi, minimal-ui, user-scalable=no">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--<div ng-cloak>-->
+<div>
+   <div ng-controller="homeCtrl11" style="background: red;display: none;">
+       <h1>测试首页</h1>
+       <h1>测试首页</h1>
+       <h1>测试首页</h1>
+       <h1 ng-click="myClick()">点击</h1>
+       <div class="js_test"></div>
+   </div>
+
+   <!-- header部分 -->
+   <header>
+     <a href="#/home">首页</a>
+     <a ui-sref="company">公司</a>
+     <a ui-sref="deal">一拍</a>
+   </header>
+
+   <!-- 主体部分 -->
+   <div style="border: 2px solid red;">
+    <div ui-view=""></div>
+   </div>
+
+   <div ng-controller="testCtrl">
+       <p ng-bind="str"></p>
+       <p>名字：<span ng-bind="name"></span></p>
+       <p>名字：<span ng-bind="age"></span></p>
+   </div>
+
+
+
+
+
+
+</div>
+<script type="text/javascript" src="js/require.js"></script>
+<script type="text/javascript" src="js/require_config.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/app_js/services.js"></script>
+<script type="text/javascript" src="js/app_js/controllers.js"></script>
+<!-- 百度地图API -->
+<!--<script src="https://api.map.baidu.com/api?v=2.0&ak=1WhbEDsqiM1TVMxk88S6gYEbF17PpfsG&s=1"></script>-->
+</body>
+</html>

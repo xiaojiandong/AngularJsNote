@@ -1,0 +1,21 @@
+
+
+
+<div class="company-jobs-page-wrap">
+ <h1>近2个月共有29个再招职位</h1>
+ <div class="jobs-nav-check">
+   <label>职位:</label>
+   <!--
+   <span class="job-type" data-jobId="0">全部</span>
+   <span class="job-type" data-jobId="1">技术</span>
+   <span class="job-type" data-jobId="2">设计</span>
+   <span class="job-type" data-jobId="3">运营</span>
+   <span class="job-type" data-jobId="4">市场与销售</span>
+   -->
+   <span ng-repeat="jobType in jobTypes"
+         data-jobId="{{jobType.jobId}}"
+         ng-click="onChcekJobTypeClick(jobType)">
+       {{jobType.name}}{{$index}}
+   </span>
+ </div>
+</div>

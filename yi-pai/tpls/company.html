@@ -1,0 +1,26 @@
+
+<div class="company-foo-wrap">
+
+  <div class="company-header">
+    <!-- 先用图片代替，后用文字 -->
+    <img src="./images/company-header.png" alt=""/>
+  </div>
+
+  <h1>公司名字:<span ng-bind="companyName"></span></h1>
+  <h1>主册时间:<span ng-bind="registerTime"></span></h1>
+  <h1>员工规模:<span ng-bind="companyStaff"></span></h1>
+
+  <!-- 两个切换子导航 -->
+  <div class="company-nav-check">
+    <a ui-sref=".company_main_page">公司主页</a>
+    <a ui-sref=".company_jobs_page">招聘职位</a>
+  </div>
+
+  <div class="company-body">
+   <div ui-view="">
+
+   </div>
+  </div>
+
+</div>
+

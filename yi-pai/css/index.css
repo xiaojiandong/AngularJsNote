@@ -1,0 +1,10 @@
+body {
+  font-family: '微软雅黑';
+}
+a,
+a:hover,
+a:visited,
+a:checked {
+  color: #000;
+  text-decoration: none;
+}
