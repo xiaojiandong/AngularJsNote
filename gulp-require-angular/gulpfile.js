@@ -105,7 +105,7 @@ gulp.task('mainjs',function(){
 gulp.task('imgmin', function() {
     return gulp.src('./dev/images/**/*')
         .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('./static/lib/images/'));
+        .pipe(gulp.dest('./lib/images'));
 });
 
 // 创建任务clean，清空lib里之前的的压缩文件
