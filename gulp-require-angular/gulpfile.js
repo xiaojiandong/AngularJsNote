@@ -9,6 +9,8 @@ var rename = require('gulp-rename'); // 重命名
 var del = require('del'); //删除文件
 var livereload = require('gulp-livereload'); // 监听页面变化
 var notify = require('gulp-notify'); // 消息提醒
+var imagemin = require('gulp-imagemin');   //图片压缩
+var cache = require('gulp-cache');
 //var shell = require('gulp-shell');
 //var amdOptimize = require('amd-optimize');// 关键插件：gulp与require集成
 //var requirejs = require('gulp-requirejs-simple'); // 合并打包requirejs(未用到)
@@ -99,6 +101,13 @@ gulp.task('mainjs',function(){
        .pipe(livereload({start:true}));
 });
 
+// 压缩图片
+gulp.task('imgmin', function() {
+    return gulp.src('./dev/images/**/*')
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(gulp.dest('./static/lib/images/'));
+});
+
 // 创建任务clean，清空lib里之前的的压缩文件
 gulp.task('clean' , function (cb) {
    return del(['./lib/'],cb); //加上return表示同步
@@ -106,7 +115,7 @@ gulp.task('clean' , function (cb) {
 
 
 gulp.task('default',['clean'],function(){//先执行clean，再执行下面的任务
-   gulp.start(['htmlmin','cssmin','jsmin','tplsmin','mainjs','maincss']);
+   gulp.start(['htmlmin','cssmin','jsmin','tplsmin','mainjs','maincss','imgmin']);
 });
 
 gulp.task('watch',function(){
