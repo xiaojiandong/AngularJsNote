@@ -110,6 +110,11 @@ $(function(){
                     }
                 })
     }]);
-    // 启动angular
+    // 启动angular1
     angular.bootstrap(document,['AppModule1']);
+    /* 启动angular2
+    angular.element(document).ready(function () {
+       angular.bootstrap(document, ['AppModule1']);
+    });
+    */
 });
