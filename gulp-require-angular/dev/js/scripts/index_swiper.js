@@ -1,8 +1,9 @@
 /**
  * Created by Administrator on 2016/6/17.
  */
-console.log('方法1：require+angular模块依赖');
-require(['base','controllers','services'],function(base,controllers,services){
+console.log('方法1：require+angular+swiper模块依赖');
+require(['base','swiper','controllers','services'], // 根据业务需要，引入swiper模块
+    function(base,swiper,controllers,services){
 
     var routerApp = angular.module('AppModule', ['ui.router','routerCtrls','routerServices']);
 

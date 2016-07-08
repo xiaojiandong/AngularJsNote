@@ -30,8 +30,10 @@ gulp.task('htmlmin',function(){
 
 gulp.task('tplsmin',function(){
     return gulp.src('./dev/html/tpls/**/*.html')
-       .pipe(htmlmin({collapseWhitespace : true})) // 压缩html
-       .pipe(gulp.dest('./lib/html/tpls'));
+       //.pipe(htmlmin({collapseWhitespace : true})) // 压缩html
+        .pipe(notify({message:'tpls模板编写成功！'}))
+        .pipe(gulp.dest('./lib/html/tpls'))
+        .pipe(livereload({start:true}));
 });
 
 
@@ -61,7 +63,7 @@ gulp.task('jsmin',function(){
 
 // 压缩合并css(引入到./dev/html/index1.html)
 gulp.task('maincss',function(){
-    var mainCssPath = './dev/css/';
+     var mainCssPath = './dev/css/';
      return gulp.src([
          mainCssPath + 'bootstrap.min.css',
          mainCssPath + 'jquery-confirm.min.css', // 第3三方css
@@ -101,18 +103,18 @@ gulp.task('mainjs',function(){
        .pipe(livereload({start:true}));
 });
 
-// 压缩图片
-gulp.task('imgmin', function() {
-    return gulp.src('./dev/images/**/*')
-        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('./lib/images'));
-});
-
 // 创建任务clean，清空lib里之前的的压缩文件
 gulp.task('clean' , function (cb) {
    return del(['./lib/'],cb); //加上return表示同步
 });
 
+// 压缩图片
+gulp.task('imgmin', function() {
+    return gulp.src('./dev/images/**/*')
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(notify({message : 'img压缩成功'}))
+        .pipe(gulp.dest('./lib/images'));
+});
 
 gulp.task('default',['clean'],function(){//先执行clean，再执行下面的任务
    gulp.start(['htmlmin','cssmin','jsmin','tplsmin','mainjs','maincss','imgmin']);
@@ -122,6 +124,7 @@ gulp.task('watch',function(){
    livereload.listen();
    // 监听开发文件的变化，并执行该任务
    gulp.watch('./dev/html/**/*.html',['htmlmin']);
+   gulp.watch('./dev/html/tpls/**/*.html',['tplsmin']);
    gulp.watch('./dev/css/*.less',['cssmin']);
    gulp.watch('./dev/css/**/*.css',['maincss']);
    gulp.watch('./dev/js/**/*.js',['jsmin','mainjs']);

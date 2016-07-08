@@ -599,7 +599,42 @@ routerCtrls.controller('signupCtrl' , ['$rootScope','$scope','$state','allStuden
                 $state.go('index.usermng.allstudents');
                 SUBJFac.selectTopBarActive(1);// 班级管理 topbar-1
             };
+}]);
 
+
+// 个人中心
+routerCtrls.controller('userInfoCtrl',['$rootScope','$scope','$timeout',
+   function($rootScope,$scope,$timeout){
+   //$scope.userFilter = function(data){ // 过滤器
+   //    return data.totalScore > 450; // 分数>500的结果保留
+   //};
+   $scope.myKeyup = function(e){
+       var keycode = window.event?e.keyCode:e.which;
+       if(keycode==13){ // 回车键键值为13
+           //alert('你按下的回车键' + keycode);
+           alert($scope.selectName);
+       }
+   };
+  /*
+  $scope.selectName;
+  var timer; // 监听输入框值的变化
+  $scope.$watch('selectName',function(selectName){//selectName->输入框中的值
+       if(selectName){
+          if(timer){
+              $timeout.cancel(timer); // 防止页面重复请求
+          }
+          timer = $timeout(function(){
+              angular.forEach($rootScope.students,function(data,value){
+                 if(data.totalScore){
+                     //data.totalScore = Number(data.totalScore);
+                     //selectName = Number(selectName);
+                 }
+              });
+              $scope.selectName = selectName;
+          },400);
+       }
+  });
+  */
 }]);
 
 });

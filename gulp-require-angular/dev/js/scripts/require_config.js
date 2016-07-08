@@ -9,6 +9,7 @@ require.config({
      'angular' : 'common/angular-1.3.0',
      'router' : 'common/angular-ui-router',
      'base' : 'common/base',
+     'swiper' : 'common/swiper.3.3.0.min',
      'controllers' : 'common/controllers',
      'services' : 'common/services'
    },
@@ -23,6 +24,10 @@ require.config({
       'bootstrap' : {
           'deps' : ['jquery'],
           'exports' : 'bootstrap'
+      },
+      'swiper' : { // 这个插件模块根据业务需要而引入具体页面
+        'deps' : ['jquery'],
+        'exports' : 'swiper'
       },
       'router' : { // router依赖angular
           'deps' : ['angular'],

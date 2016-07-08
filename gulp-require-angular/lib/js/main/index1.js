@@ -1,7 +1,6 @@
 /**
  * Created by Administrator on 2016/6/17.
  */
-
 $(function(){
  console.log('方法2：gulp+angular压缩打包合并');
  var routerApp = angular.module('AppModule1', ['ui.router','routerCtrls','routerServices']);

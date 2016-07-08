@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Swiper测试</title>
+    <link href="http://cdn.bootcss.com/Swiper/3.3.0/css/swiper.min.css" rel="stylesheet">
+    <style>
+        .page-container{
+            width: 640px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        h2{
+            text-align: center;
+        }
+        /* 滚动海报 */
+        .swiper-container {
+            width: 640px;
+            height: 580px;
+            padding-top: 40px;
+            margin: 0 auto;
+            /*padding-bottom: 20px;*/
+            border: 2px solid #000;
+            box-sizing: border-box;
+        }
+        /* 每个子海报大小 */
+        .swiper-slide {
+            display: block;
+            width: 360px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Swiper测试</h1>
+
+
+<div class="page-container">
+    <h2>swiper立体轮播</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <img class="swiper-slide" src="http://ww2.sinaimg.cn/bmiddle/db1504dajw1err7gfg9w4j20dd0hsmyl.jpg" alt=""/>
+            <img class="swiper-slide" src="http://ww2.sinaimg.cn/large/db1504dajw1enlso9m5ctj20xf18gtgl.jpg" alt=""/>
+            <img class="swiper-slide" src="http://ww2.sinaimg.cn/bmiddle/8f14f57fgw1esg61edmwxj20c80g9q48.jpg" alt=""/>
+            <img class="swiper-slide" src="http://aliimg.changba.com/cache/photo/376485892_640_640.jpg" alt=""/>
+            <img class="swiper-slide" src="http://ww2.sinaimg.cn/large/db1504dajw1etc9rif8ovj20qo0zktgg.jpg" alt=""/>
+            <img class="swiper-slide" src="http://img.52fuqing.com/upload/news/20160303/20160303153849354.jpg" alt=""/>
+            <img class="swiper-slide" src="http://hzdaily.hangzhou.com.cn/dskb/media/1/3/2016-03/03/B16/res02_attpic_brief.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.3.0/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        speed: 700, //动画持续时间
+        autoplayDisableOnInteraction:false, //用户操作之后（swipes,arrow以及pagination 点击）autoplay不会被禁掉，用户操作之后每次都会重新启动autoplay
+        autoplay: 2500 ,
+        coverflow: {
+            rotate: 50, // 旋转角度 150
+            stretch: 0,
+            depth: 100, // 400
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+</script>
+</body>
+</html>

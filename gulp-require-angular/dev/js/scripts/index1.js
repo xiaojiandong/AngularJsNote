@@ -1,7 +1,6 @@
 /**
  * Created by Administrator on 2016/6/17.
  */
-
 $(function(){
  console.log('方法2：gulp+angular压缩打包合并');
  var routerApp = angular.module('AppModule1', ['ui.router','routerCtrls','routerServices']);
@@ -110,11 +109,6 @@ $(function(){
                     }
                 })
     }]);
-    // 启动angular1
+    // 启动angular
     angular.bootstrap(document,['AppModule1']);
-    /* 启动angular2
-    angular.element(document).ready(function () {
-       angular.bootstrap(document, ['AppModule1']);
-    });
-    */
 });
